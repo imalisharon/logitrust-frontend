@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import { parseEther, isAddress } from "ethers"; // Updated utility import
+import { parseEther, isAddress } from "ethers";
+import './DeliveryForm.css'; 
 
 const DeliveryForm = ({ setQrData, getContract }) => {
   const [deliveryId, setDeliveryId] = useState("");
@@ -56,37 +57,62 @@ const DeliveryForm = ({ setQrData, getContract }) => {
   };
 
   return (
-    <div>
-      {error && <p style={{ color: "red" }}>{error}</p>}
+    <div className="delivery-form-container">
+      {error && <p className="error-message">{error}</p>}
 
       <h3>Create Delivery</h3>
       <input
+        className="input-field"
         placeholder="Recipient Address"
         value={recipientAddress}
         onChange={(e) => setRecipientAddress(e.target.value)}
       />
       <input
+        className="input-field"
         placeholder="Courier Address"
         value={courierAddress}
         onChange={(e) => setCourierAddress(e.target.value)}
       />
-      <button onClick={createDelivery} disabled={isLoading}>
-        {isLoading ? "Creating..." : "Create Delivery"}
+      <button className="button" onClick={createDelivery} disabled={isLoading}>
+        <span>
+          <svg
+            height={24}
+            width={24}
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor" />
+          </svg>
+          {isLoading ? "Creating..." : "Create Delivery"}
+        </span>
       </button>
 
       <h3>Update Delivery Status</h3>
       <input
+        className="input-field"
         placeholder="Delivery ID"
         value={deliveryId}
         onChange={(e) => setDeliveryId(e.target.value)}
       />
-      <select value={status} onChange={(e) => setStatus(e.target.value)}>
+      <select className="select-field" value={status} onChange={(e) => setStatus(e.target.value)}>
         <option value="0">Pending</option>
         <option value="1">In Transit</option>
         <option value="2">Delivered</option>
       </select>
-      <button onClick={updateStatus} disabled={isLoading}>
-        {isLoading ? "Updating..." : "Update Status"}
+      <button className="button" onClick={updateStatus} disabled={isLoading}>
+        <span>
+          <svg
+            height={24}
+            width={24}
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M0 0h24v24H0z" fill="none" />
+            <path d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z" fill="currentColor" />
+          </svg>
+          {isLoading ? "Updating..." : "Update Status"}
+        </span>
       </button>
     </div>
   );

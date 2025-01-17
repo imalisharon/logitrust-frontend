@@ -1,8 +1,9 @@
 import React from "react";
+import './Notifications.css'; 
 
 const Notifications = ({ notifications }) => {
   return (
-    <div>
+    <div className="notifications-container">
       <h3>Notifications</h3>
       <ul>
         {notifications.map((note, index) => (

@@ -1,0 +1,65 @@
+body {
+    background-color: #4169E1; /* Background color for the body */
+    margin: 0; /* Remove default margin */
+    padding: 20px; /* Add padding around the body */
+    font-family: 'Arial', sans-serif; /* Set a default font */
+}
+
+.notifications-container {
+    background-color: #4169E1; /* Set background color to #4169E1 */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    padding: 20px; /* Padding inside the container */
+    margin: 20px auto; /* Center the container with auto margins */
+    max-width: 500px; /* Maximum width for the container */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+    width: 100%; /* Full width for responsiveness */
+}
+
+.notifications-container:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+h3 {
+    color: white; /* Set heading color to white */
+    text-align: center; /* Center the heading */
+    margin-bottom: 15px; /* Space below the heading */
+    font-size: 1.5em; /* Increase font size */
+}
+
+ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove padding */
+}
+
+li {
+    background-color: #ffffff; /* White background for each notification */
+    border-left: 5px solid #007bff; /* Blue left border for emphasis */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Padding inside each notification */
+    margin: 10px 0; /* Space between notifications */
+    color: #4169E1; /* Text color for notifications */
+    transition: background-color 0.3s, transform 0.2s; /* Smooth transition for hover effect */
+}
+
+li:hover {
+    background-color: #e2e6ea; /* Darker grey on hover */
+    transform: translateY(-2px); /* Slightly lift the notification on hover */
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .notifications-container {
+        width: 90%; /* Responsive width for smaller screens */
+        margin: 0 auto; /* Center the container */
+    }
+
+    h3 {
+        font-size: 1.3em; /* Adjust heading size for smaller screens */
+    }
+
+    li {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+}

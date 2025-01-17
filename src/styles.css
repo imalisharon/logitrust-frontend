@@ -1,21 +1,103 @@
+/* styles.css */
+
+/* General body styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Light background for contrast */
+}
+
+/* Main app container styles */
 .app-container {
-    padding: 20px;
-    font-family: Arial, sans-serif;
-    text-align: center;
-  }
-  
-  button {
-    margin: 10px;
-    padding: 10px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  input, select {
-    margin: 10px;
-    padding: 10px;
-    width: 200px;
-  }
-  
+  background-color: white; /* Change background color to white */
+  color: #1d067a; /* Text color */
+  padding: 20px; /* Padding around the content */
+  border-radius: 8px; /* Rounded corners */
+  max-width: 800px; /* Maximum width for the container */
+  margin: 40px auto; /* Center the container */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+/* Heading styles */
+h1 {
+  text-align: center; /* Center the heading */
+  margin-bottom: 20px; /* Space below the heading */
+}
+
+/* Button styles */
+button {
+  background-color: #1d067a; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove default border */
+  padding: 10px 20px; /* Padding for the button */
+  border-radius: 5px; /* Rounded corners for the button */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  font-size: 16px; /* Font size for buttons */
+}
+
+button:hover {
+  background-color: #0a004d; /* Darker shade for hover effect */
+}
+
+/* Styles for the Notifications component */
+.notifications-container {
+  background-color: #1d067a; /* Background color for notifications */
+  color: white; /* Text color */
+  padding: 20px; /* Add some padding */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  margin-top: 20px; /* Space above notifications */
+}
+
+.notifications-container h3 {
+  margin-bottom: 15px; /* Space below the heading */
+  text-align: center; /* Center the notifications heading */
+}
+
+.notifications-container ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+.notifications-container li {
+  padding: 10px; /* Add padding to each notification */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Light border between notifications */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.notifications-container li:last-child {
+  border-bottom: none; /* Remove border from the last item */
+}
+
+.notifications-container li:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Light hover effect */
+  cursor: pointer; /* Change cursor on hover */
+}
+
+/* Delivery Form styles (if applicable) */
+.delivery-form {
+  background-color: #ffffff; /* White background for the form */
+  color: #1d067a; /* Text color for the form */
+  padding: 20px; /* Padding for the form */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  margin-top: 20px; /* Space above the form */
+}
+
+.delivery-form input,
+.delivery-form button {
+  width: 100%; /* Full width for inputs and buttons */
+  margin-bottom: 10px; /* Space between inputs */
+}
+
+.delivery-form input {
+  padding: 10px; /* Padding for input fields */
+  border: 1px solid #ccc; /* Light border for input fields */
+  border-radius: 5px; /* Rounded corners for input fields */
+}
+
+.delivery-form button {
+  background-color: #1d067a; /* Button background color */
+  color: white; /* Button text color */
+}

@@ -1,0 +1,64 @@
+/* DeliveryForm.css */
+
+.delivery-form-container {
+    background-color: #ffffff; /* White background for the form */
+    color: #0F52BA; /* Text color for the form */
+    padding: 30px; /* Increased padding for a spacious feel */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin: 20px auto; /* Center the form horizontally */
+    max-width: 600px; /* Maximum width for the form */
+}
+
+h3 {
+    text-align: center; /* Center the heading */
+    margin-bottom: 20px; /* Space below the heading */
+    color: #0F52BA; /* Heading color */
+    font-size: 1.8em; /* Increase font size for better visibility */
+    font-weight: bold; /* Bold heading for emphasis */
+}
+
+.input-field, .select-field {
+    width: 100%; /* Full width for input and select fields */
+    padding: 12px; /* Padding for input fields */
+    margin-bottom: 15px; /* Space below each input */
+    border: 1px solid #ccc; /* Light border for input fields */
+    border-radius: 5px; /* Rounded corners for input fields */
+    font-size: 16px; /* Font size for input fields */
+    transition: border-color 0.3s; /* Smooth transition for border color */
+}
+
+.input-field:focus, .select-field:focus {
+    border-color: #0F52BA; /* Change border color on focus */
+    outline: none; /* Remove default outline */
+}
+
+.button:hover {
+    background-color: #0071e2; /* Darker shade for hover effect */
+}
+
+.error-message {
+    color: red; /* Red color for error messages */
+    text-align: center; /* Center the error message */
+    margin-bottom: 15px; /* Space below the error message */
+    font-weight: bold; /* Bold error message */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .delivery-form-container {
+        padding: 20px; /* Adjust padding for smaller screens */
+    }
+
+    h3 {
+        font-size: 1.5em; /* Adjust heading size for smaller screens */
+    }
+
+    .input-field, .select-field {
+        padding: 10px; /* Adjust padding for input fields */
+    }
+
+    .button {
+        padding: 10px; /* Adjust padding for buttons */
+    }
+}
